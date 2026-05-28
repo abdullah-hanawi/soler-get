@@ -87,7 +87,7 @@
             color: var(--petroleum);
             font-weight: 600;
             padding: 8px 16px;
-            border-radius: 5px;
+            border-radius: 50px;
             transition: all 0.3s ease;
         }
 
@@ -360,14 +360,14 @@
             text-align: justify;
         }
 
-        /* المنتجات والمعدات */
+        /* المنتجات والمعدات المحدثة */
         .products-section {
             padding: 80px 0;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -376,6 +376,12 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(19, 78, 94, 0.12);
         }
 
         .prod-img img {
@@ -404,6 +410,11 @@
             color: var(--gray-text);
             font-size: 14px;
             margin-bottom: 20px;
+            height: 66px; /* توحيد الارتفاع للنصوص */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
 
         .prod-footer {
@@ -791,18 +802,19 @@
     <section id="products" class="products-section">
         <div class="container">
             <div class="section-header">
-                <span class="sub-title">معرض المعدات</span>
-                <h2>أحدث التقنيات والشراكات العالمية</h2>
+                <span class="sub-title">منتجاتنا الذكية</span>
+                <h2>حلول ومكونات طاقة شمسية رائدة</h2>
             </div>
             <div class="products-grid">
+                
                 <div class="product-box">
                     <div class="prod-img">
-                        <img src="https://images.unsplash.com/photo-1620000617482-821324eb9a14?auto=format&fit=crop&w=500&q=80" alt="Micno Inverter">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=80" alt="Mono crystalline Solar Panels">
                     </div>
                     <div class="prod-info">
-                        <span class="prod-brand">Micno Series</span>
-                        <h3>Micno Solar Pump Inverter</h3>
-                        <p>مغيرات سرعة متطورة مخصصة لمضخات أعماق المياه، تدعم الحماية الذكية من الجفاف والتشغيل التلقائي.</p>
+                        <span class="prod-brand">EcoVolt Pro</span>
+                        <h3>ألواح شمسية أحادية الكريستال 550 واط</h3>
+                        <p>تتمتع بكفاءة تحويل فائقة تصل إلى 22%، مع تصميم متين مقاوم للظروف المناخية القاسية والأتربة لضمان أعلى إنتاجية.</p>
                         <div class="prod-footer">
                             <span class="price-status">طلب تسعير</span>
                             <a href="#contact" class="btn-arrow"><i class="fas fa-arrow-left"></i></a>
@@ -812,18 +824,49 @@
 
                 <div class="product-box">
                     <div class="prod-img">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=80" alt="Solar Panels">
+                        <img src="https://images.unsplash.com/photo-1620000617482-821324eb9a14?auto=format&fit=crop&w=500&q=80" alt="Smart Solar Inverter">
                     </div>
                     <div class="prod-info">
-                        <span class="prod-brand">Trina / Jinko</span>
-                        <h3>ألواح شمسية ثنائية الوجه 590 واط</h3>
-                        <p>تكنولوجيا الـ Bifacial المتطورة لامتصاص الضوء المنعكس من الأرض لزيادة الإنتاجية الكلية بنسبة تصل لـ 25%.</p>
+                        <span class="prod-brand">Nexus Grid</span>
+                        <h3>عاكس طاقة ذكي (Inverter) هجين</h3>
+                        <p>محول ذكي يربط بين الألواح والبطاريات والشبكة الكهربائية، مع دعم كامل لتطبيق المتابعة الذكية للهواتف عن بُعد.</p>
                         <div class="prod-footer">
                             <span class="price-status">طلب تسعير</span>
                             <a href="#contact" class="btn-arrow"><i class="fas fa-arrow-left"></i></a>
                         </div>
                     </div>
                 </div>
+
+                <div class="product-box">
+                    <div class="prod-img">
+                        <img src="https://images.unsplash.com/photo-1631553127988-348578ecb66a?auto=format&fit=crop&w=500&q=80" alt="Lithium Solar Battery">
+                    </div>
+                    <div class="prod-info">
+                        <span class="prod-brand">Lithium Max</span>
+                        <h3>بطارية ليثيوم لتخزين الطاقة 10 كيلوواط</h3>
+                        <p>بطاريات ليثيوم (LiFePO4) ذات العمر الافتراضي الطويل لتأمين تيار كهربائي مستقر ومستمر للمنازل والمصانع خلال الليل.</p>
+                        <div class="prod-footer">
+                            <span class="price-status">طلب تسعير</span>
+                            <a href="#contact" class="btn-arrow"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-box">
+                    <div class="prod-img">
+                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=500&q=80" alt="Solar Water Heater">
+                    </div>
+                    <div class="prod-info">
+                        <span class="prod-brand">Therma Sol</span>
+                        <h3>سخانات مياه شمسية سعة 300 لتر</h3>
+                        <p>أنظمة تسخين مياه مركزية تعتمد على الأنابيب المفرغة الحرارية لتوفير مياه ساخنة بكفاءة 100% وتقليل فاتورة الكهرباء.</p>
+                        <div class="prod-footer">
+                            <span class="price-status">طلب تسعير</span>
+                            <a href="#contact" class="btn-arrow"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -944,7 +987,7 @@
         });
 
         // تفعيل الحالة النشطة للروابط تلقائياً عند التمرير (Scroll Spy)
-        const sections = document.querySelectorAll('section');
+        const sections = document.querySelectorAll('section, div[id]');
         const navItems = document.querySelectorAll('.nav-links .nav-item');
 
         window.addEventListener('scroll', () => {
